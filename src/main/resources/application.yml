@@ -1,0 +1,27 @@
+spring:
+  config:
+    name: config_server
+  cloud:
+    config:
+      server:
+# first solution read configuration files from root directory of a remote repo
+        git:
+          uri: https://github.com/mohamedsamir1495/spring_config_server_data
+# Second solution read configuration files from a directory path in a remote repo
+#          uri: https://github.com/mohamedsamir1495/spring_config_server_data
+#          search-paths: >
+#            Config/smtp,
+#            Config/mongo
+
+# Third solution read configuration from the application itself from src/main/resources directory
+#        native:
+#          searchLocations: >
+#            classpath:/rabbitmq,
+#            classpath:/database
+
+# You need to set the spring profile to native in order for the third solution to work
+#  profiles:
+#    active: native
+server:
+  port: 8888
+
