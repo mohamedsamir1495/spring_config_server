@@ -18,7 +18,6 @@ ext {
 
 dependencies {
     implementation 'org.springframework.cloud:spring-cloud-config-server'
-    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-parent', version: 'Hoxton.SR3', ext: 'pom'
     annotationProcessor 'org.projectlombok:lombok:1.18.12'
 
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
